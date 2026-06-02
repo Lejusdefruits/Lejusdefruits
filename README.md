@@ -1,55 +1,54 @@
 <div align="center">
 
-  <!-- Interactive Sketchy LangGraph Workflow -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/agentic-workflow-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/agentic-workflow-light.svg">
-    <img alt="Agentic Workflow Blueprint" src="./assets/agentic-workflow-light.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/neural-journey-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/neural-journey-light.svg">
+    <img alt="Neural Journey" src="./assets/neural-journey-light.svg" width="100%">
   </picture>
 
   <br><br>
 
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Caveat&weight=600&size=32&duration=3000&pause=1000&color=BF616A&center=true&vCenter=true&width=600&height=50&lines=Agentic+AI+Engineer;Building+Autonomous+Workflows;LangGraph+%2B+LLMs+%2B+Tools)](https://github.com/Lejusdefruits)
+  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=32&duration=3000&pause=1000&color=A3BE8C&center=true&vCenter=true&width=600&height=50&lines=Software+Engineer;System+Architecture;Building+the+Future)](https://github.com/Lejusdefruits)
 
-  <br>
-  
-  <i>"I don't just write code, I orchestrate intelligent systems."</i>
-  
   <br><br>
 </div>
 
 ---
 
-## 🧠 <code>[System.prompt]</code> Who am I?
+## [System.prompt] Profile Summary
 
 <details open>
-<summary><b>▶ <code>Execute Agent: Profile Analysis</code></b></summary>
+<summary><b>[Execute] View Experience</b></summary>
 <br>
 
-> **Observation**: The user is viewing my GitHub profile.
-> **Thought**: I should present my core expertise clearly and concisely.
-> **Action**: Output `profile_summary.yaml`
+> **Observation**: System requesting experience logs.
+> **Action**: Output `experience.log`
 
 ```yaml
-role: AI & Software Engineer
-specialty: Agentic Workflows, LLM Orchestration, Backend Systems
-current_focus: Building tools that can think, plan, and execute autonomously.
-tech_stack:
-  - Python / TypeScript
-  - LangChain / LangGraph / LlamaIndex
-  - Vector Databases (Pinecone, Qdrant)
-  - Docker & Kubernetes
-location: Paris, France
+role: [Current Title / Position]
+specialty: [Core Technical Specialty]
+current_focus: [What you are currently working on or learning]
+location: [Your Location]
 contact: [EMAIL_ADDRESS]**
 ```
 </details>
 
 <details>
-<summary><b>▶ <code>Execute Agent: View Tools & Skills</code></b></summary>
+<summary><b>[Execute] View Projects</b></summary>
 <br>
 
-> **Action**: Query `skillicons.dev` API
+> **Action**: Query project repository.
 > **Result**:
+
+- **[Project Alpha Name]**: [Short description of the project and its impact].
+- **[Project Beta Name]**: [Short description of the project and its impact].
+- **[Project Gamma Name]**: [Short description of the project and its impact].
+
+</details>
+
+---
+
+## [Telemetry.log] Technical Stack & Statistics
 
 <div align="center">
   <br>
@@ -59,23 +58,17 @@ contact: [EMAIL_ADDRESS]**
   <br><br>
 </div>
 
-</details>
-
----
-
-## 📊 <code>[Telemetry.log]</code> GitHub Statistics
-
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Lejusdefruits&show_icons=true&hide_border=true&bg_color=00000000&title_color=A3BE8C&icon_color=A3BE8C&text_color=E5E9F0">
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=Lejusdefruits&show_icons=true&hide_border=true&bg_color=00000000&title_color=BF616A&icon_color=BF616A&text_color=3B4252">
-    <img src="https://github-readme-stats.vercel.app/api?username=Lejusdefruits&show_icons=true&hide_border=true&bg_color=00000000&title_color=BF616A&icon_color=BF616A&text_color=3B4252" alt="GitHub Stats" height="155" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=Lejusdefruits&show_icons=true&hide_border=true&bg_color=00000000&title_color=4C566A&icon_color=4C566A&text_color=1A1A1A">
+    <img src="https://github-readme-stats.vercel.app/api?username=Lejusdefruits&show_icons=true&hide_border=true&bg_color=00000000&title_color=4C566A&icon_color=4C566A&text_color=1A1A1A" alt="GitHub Stats" height="155" />
   </picture>
   &nbsp;
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Lejusdefruits&layout=compact&hide_border=true&bg_color=00000000&title_color=A3BE8C&text_color=E5E9F0&langs_count=6">
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Lejusdefruits&layout=compact&hide_border=true&bg_color=00000000&title_color=BF616A&text_color=3B4252&langs_count=6">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Lejusdefruits&layout=compact&hide_border=true&bg_color=00000000&title_color=BF616A&text_color=3B4252&langs_count=6" alt="Top Languages" height="155" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Lejusdefruits&layout=compact&hide_border=true&bg_color=00000000&title_color=4C566A&text_color=1A1A1A&langs_count=6">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Lejusdefruits&layout=compact&hide_border=true&bg_color=00000000&title_color=4C566A&text_color=1A1A1A&langs_count=6" alt="Top Languages" height="155" />
   </picture>
 </div>
 
