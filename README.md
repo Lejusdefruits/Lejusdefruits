@@ -15,36 +15,13 @@
 
 ---
 
-## [System.prompt] Profile Summary
-
-<details open>
-<summary><b>[Execute] View Experience</b></summary>
-<br>
-
-> **Observation**: System requesting experience logs.
-> **Action**: Output `experience.log`
-
-```yaml
-role: [Current Title / Position]
-specialty: [Core Technical Specialty]
-current_focus: [What you are currently working on or learning]
-location: [Your Location]
-contact: [EMAIL_ADDRESS]**
-```
-</details>
-
-<details>
-<summary><b>[Execute] View Projects</b></summary>
-<br>
-
-> **Action**: Query project repository.
-> **Result**:
-
-- **[Project Alpha Name]**: [Short description of the project and its impact].
-- **[Project Beta Name]**: [Short description of the project and its impact].
-- **[Project Gamma Name]**: [Short description of the project and its impact].
-
-</details>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/interactive-os-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/interactive-os-light.svg">
+    <img alt="Interactive OS" src="./assets/interactive-os-light.svg" width="100%">
+  </picture>
+</div>
 
 ---
 
