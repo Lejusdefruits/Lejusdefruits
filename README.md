@@ -8,7 +8,7 @@
 
   <br><br>
 
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=32&duration=3000&pause=1000&color=A3BE8C&center=true&vCenter=true&width=600&height=50&lines=Software+Engineer;System+Architecture;Building+the+Future)](https://github.com/Lejusdefruits)
+  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=32&duration=3000&pause=1000&color=A3BE8C&center=true&vCenter=true&width=600&height=50&lines=Software+Developer;Backend+%26+Systems;Agentic+AI)](https://github.com/Lejusdefruits)
 
   <br><br>
 </div>
