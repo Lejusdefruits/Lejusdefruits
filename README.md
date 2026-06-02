@@ -1,64 +1,85 @@
 <div align="center">
+
+  <!-- Interactive Sketchy LangGraph Workflow -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg">
-    <img alt="Lejusdefruits" src="./assets/header-light.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/agentic-workflow-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/agentic-workflow-light.svg">
+    <img alt="Agentic Workflow Blueprint" src="./assets/agentic-workflow-light.svg" width="100%">
   </picture>
 
   <br><br>
 
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=22&duration=3000&pause=1000&color=FF6B00&center=true&vCenter=true&width=600&height=50&lines=D%C3%A9veloppeur+Logiciel;Conception+de+solutions+performantes;Passionn%C3%A9+par+le+code+propre)](https://github.com/Lejusdefruits)
+  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Caveat&weight=600&size=32&duration=3000&pause=1000&color=BF616A&center=true&vCenter=true&width=600&height=50&lines=Agentic+AI+Engineer;Building+Autonomous+Workflows;LangGraph+%2B+LLMs+%2B+Tools)](https://github.com/Lejusdefruits)
 
   <br>
-
-  <a href="https://github.com/Lejusdefruits">
-    <img src="https://komarev.com/ghpvc/?username=Lejusdefruits&color=FF6B00&style=flat-square&label=VISITES" alt="Visiteurs" />
-  </a>
+  
+  <i>"I don't just write code, I orchestrate intelligent systems."</i>
+  
+  <br><br>
 </div>
 
 ---
 
-## 👨‍💻 À propos de moi
+## 🧠 <code>[System.prompt]</code> Who am I?
 
-Développeur passionné, je mixe les technologies pour créer des applications web robustes et rafraîchissantes. Mon objectif est d'extraire le meilleur de chaque outil pour servir des solutions logicielles concentrées en performance et garanties sans pépins.
+<details open>
+<summary><b>▶ <code>Execute Agent: Profile Analysis</code></b></summary>
+<br>
 
-- 🚀 Actuellement en train de presser du code pour des applications vitaminées.
-- 💡 Toujours en quête de nouvelles recettes d'architecture et de bonnes pratiques.
-- 🤝 Prêt à trinquer et collaborer sur des projets open-source fruités.
-- 📫 Pour me contacter : [EMAIL_ADDRESS]**
+> **Observation**: The user is viewing my GitHub profile.
+> **Thought**: I should present my core expertise clearly and concisely.
+> **Action**: Output `profile_summary.yaml`
 
----
+```yaml
+role: AI & Software Engineer
+specialty: Agentic Workflows, LLM Orchestration, Backend Systems
+current_focus: Building tools that can think, plan, and execute autonomously.
+tech_stack:
+  - Python / TypeScript
+  - LangChain / LangGraph / LlamaIndex
+  - Vector Databases (Pinecone, Qdrant)
+  - Docker & Kubernetes
+location: Paris, France
+contact: [EMAIL_ADDRESS]**
+```
+</details>
 
-## 🛠️ Technologies & Outils
+<details>
+<summary><b>▶ <code>Execute Agent: View Tools & Skills</code></b></summary>
+<br>
+
+> **Action**: Query `skillicons.dev` API
+> **Result**:
 
 <div align="center">
+  <br>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=ts,js,python,react,nodejs,docker,git,linux&perline=10" alt="Technologies" />
+    <img src="https://skillicons.dev/icons?i=py,ts,js,go,react,nextjs,nodejs,docker,kubernetes,aws,gcp,git,linux,bash&perline=14" alt="Technologies" />
   </a>
+  <br><br>
 </div>
+
+</details>
 
 ---
 
-## 📊 Statistiques GitHub
+## 📊 <code>[Telemetry.log]</code> GitHub Statistics
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Lejusdefruits&show_icons=true&hide_border=true&bg_color=0D1117&title_color=FF6B00&icon_color=FF8C1A&text_color=C9D1D9">
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=Lejusdefruits&show_icons=true&hide_border=true&bg_color=ffffff&title_color=FF6B00&icon_color=FF8C1A&text_color=333333">
-    <img src="https://github-readme-stats.vercel.app/api?username=Lejusdefruits&show_icons=true&hide_border=true&bg_color=ffffff&title_color=FF6B00&icon_color=FF8C1A&text_color=333333" alt="GitHub Stats" height="165" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Lejusdefruits&show_icons=true&hide_border=true&bg_color=00000000&title_color=A3BE8C&icon_color=A3BE8C&text_color=E5E9F0">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=Lejusdefruits&show_icons=true&hide_border=true&bg_color=00000000&title_color=BF616A&icon_color=BF616A&text_color=3B4252">
+    <img src="https://github-readme-stats.vercel.app/api?username=Lejusdefruits&show_icons=true&hide_border=true&bg_color=00000000&title_color=BF616A&icon_color=BF616A&text_color=3B4252" alt="GitHub Stats" height="155" />
   </picture>
+  &nbsp;
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Lejusdefruits&layout=compact&hide_border=true&bg_color=0D1117&title_color=FF6B00&text_color=C9D1D9&langs_count=6">
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Lejusdefruits&layout=compact&hide_border=true&bg_color=ffffff&title_color=FF6B00&text_color=333333&langs_count=6">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Lejusdefruits&layout=compact&hide_border=true&bg_color=ffffff&title_color=FF6B00&text_color=333333&langs_count=6" alt="Top Languages" height="165" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Lejusdefruits&layout=compact&hide_border=true&bg_color=00000000&title_color=A3BE8C&text_color=E5E9F0&langs_count=6">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Lejusdefruits&layout=compact&hide_border=true&bg_color=00000000&title_color=BF616A&text_color=3B4252&langs_count=6">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Lejusdefruits&layout=compact&hide_border=true&bg_color=00000000&title_color=BF616A&text_color=3B4252&langs_count=6" alt="Top Languages" height="155" />
   </picture>
 </div>
 
+<br>
 <div align="center">
-  <br>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=Lejusdefruits&hide_border=true&background=0D1117&ring=FF6B00&fire=FF8C1A&currStreakLabel=FF6B00&sideLabels=C9D1D9&dates=C9D1D9&currStreakNum=C9D1D9&sideNums=C9D1D9&stroke=C9D1D9&dayLabels=C9D1D9">
-    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=Lejusdefruits&hide_border=true&background=ffffff&ring=FF6B00&fire=FF8C1A&currStreakLabel=FF6B00&sideLabels=333333&dates=333333&currStreakNum=333333&sideNums=333333&stroke=333333&dayLabels=333333">
-    <img src="https://streak-stats.demolab.com?user=Lejusdefruits&hide_border=true&background=ffffff&ring=FF6B00&fire=FF8C1A&currStreakLabel=FF6B00&sideLabels=333333&dates=333333&currStreakNum=333333&sideNums=333333&stroke=333333&dayLabels=333333" alt="GitHub Streak" height="165" />
-  </picture>
+  <img src="https://komarev.com/ghpvc/?username=Lejusdefruits&color=8FBCBB&style=flat-square&label=PROFILE_VIEWS" alt="Visiteurs" />
 </div>

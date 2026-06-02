@@ -1,0 +1,149 @@
+<svg viewBox="0 0 800 350" width="800" height="350" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Caveat', 'Architects Daughter', cursive, sans-serif; cursor: default;">
+  <defs>
+    <!-- Filtre Sketchy pour donner l'aspect dessiné à la main -->
+    <filter id="sketchy" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    
+    <!-- Filtre Glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Définitions des formes (Nodes) -->
+    <g id="user-shape">
+      <circle class="node" cx="0" cy="0" r="45" />
+      <text class="label" y="-5">User Input</text>
+      <text class="sublabel" y="15">Prompt</text>
+    </g>
+    <g id="router-shape">
+      <rect class="node" x="-80" y="-60" width="160" height="120" rx="10" />
+      <text class="label" y="-15">LangGraph</text>
+      <text class="sublabel" y="10">Agent Router</text>
+      <text class="sublabel" y="30">(LLM)</text>
+    </g>
+    <g id="tool-search">
+      <rect class="node" x="-60" y="-35" width="120" height="70" rx="5" />
+      <text class="label" y="0">Search Tool</text>
+      <text class="sublabel" y="20">Tavily API</text>
+    </g>
+    <g id="tool-rag">
+      <rect class="node" x="-60" y="-35" width="120" height="70" rx="5" />
+      <text class="label" y="0">RAG Memory</text>
+      <text class="sublabel" y="20">Vector DB</text>
+    </g>
+    <g id="tool-code">
+      <rect class="node" x="-60" y="-35" width="120" height="70" rx="5" />
+      <text class="label" y="0">Code Exec</text>
+      <text class="sublabel" y="20">Python REPL</text>
+    </g>
+  </defs>
+
+  <style>
+    :root {
+      --bg: #0D1117;
+      --stroke: #D8DEE9;
+      --text: #E5E9F0;
+      --path-base: #4C566A;
+      --path-active: #88C0D0;
+      --accent-hover: #A3BE8C;
+    }
+    
+    /* Variables héritées pour traverser le Shadow DOM des <use> */
+    .workflow-group {
+      --node-stroke: var(--stroke);
+      --node-width: 2.5;
+      --node-filter: url(#sketchy);
+    }
+    
+    .workflow-group:hover {
+      --node-stroke: var(--accent-hover);
+      --node-width: 3.5;
+      --node-filter: url(#sketchy) url(#glow);
+    }
+    
+    .node {
+      fill: var(--bg);
+      stroke: var(--node-stroke);
+      stroke-width: var(--node-width);
+      filter: var(--node-filter);
+      transition: all 0.3s ease;
+    }
+    
+    .label {
+      font-size: 22px;
+      fill: var(--text);
+      font-weight: bold;
+      text-anchor: middle;
+      pointer-events: none;
+    }
+    
+    .sublabel {
+      font-size: 16px;
+      fill: var(--text);
+      opacity: 0.7;
+      text-anchor: middle;
+      pointer-events: none;
+    }
+
+    .edge {
+      fill: none;
+      stroke: var(--path-base);
+      stroke-width: 2.5;
+      stroke-dasharray: 8 8;
+      filter: url(#sketchy);
+      transition: all 0.3s ease;
+    }
+    
+    /* Animation au survol */
+    .workflow-group:hover .edge {
+      stroke: var(--path-active);
+      stroke-width: 4;
+      stroke-dasharray: 12 12;
+      animation: dash 1s linear infinite;
+    }
+
+    @keyframes dash {
+      from { stroke-dashoffset: 24; }
+      to { stroke-dashoffset: 0; }
+    }
+  </style>
+  
+  <rect width="100%" height="100%" fill="var(--bg)" rx="15" />
+
+  <text x="400" y="30" font-size="24" fill="var(--stroke)" font-weight="bold" text-anchor="middle" filter="url(#sketchy)">Agentic Architecture Blueprint</text>
+  <text x="400" y="55" font-size="16" fill="var(--path-base)" font-style="italic" text-anchor="middle">Hover over nodes to trace the execution flow ⚡</text>
+
+  <!-- Groupes interactifs. L'ordre de déclaration définit l'ordre d'empilement (z-index) -->
+  
+  <g class="workflow-group">
+    <path class="edge" d="M 120 175 L 310 175" />
+    <use href="#user-shape" x="120" y="175" />
+  </g>
+
+  <g class="workflow-group">
+    <!-- Courbe de Bézier pour donner un effet organique -->
+    <path class="edge" d="M 310 175 Q 480 175 600 110" />
+    <path class="edge" d="M 310 175 L 600 200" />
+    <path class="edge" d="M 310 175 Q 480 175 600 290" />
+    <use href="#router-shape" x="310" y="175" />
+  </g>
+
+  <g class="workflow-group">
+    <use href="#tool-search" x="600" y="110" />
+  </g>
+
+  <g class="workflow-group">
+    <use href="#tool-rag" x="600" y="200" />
+  </g>
+
+  <g class="workflow-group">
+    <use href="#tool-code" x="600" y="290" />
+  </g>
+
+</svg>
