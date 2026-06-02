@@ -1,0 +1,33 @@
+name: 🏙️ Contributions 3D
+
+on:
+  schedule:
+    - cron: "0 0 * * *"       # une fois par jour
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Générer les SVG 3D
+        uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Publier dans output/profile-3d-contrib
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./profile-3d-contrib
+          publish_branch: output
+          destination_dir: profile-3d-contrib
+          keep_files: true
