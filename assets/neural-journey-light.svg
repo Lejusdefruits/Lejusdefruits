@@ -1,121 +1,133 @@
-<svg viewBox="0 0 900 450" width="900" height="450" xmlns="http://www.w3.org/2000/svg" style="font-family: monospace; cursor: default;">
-  <defs>
-    <!-- Sketchy Filter -->
-    <filter id="sketchy" x="-20%" y="-20%" width="140%" height="140%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" result="noise" />
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G" />
-    </filter>
-  </defs>
-
+<svg viewBox="0 0 900 450" width="900" height="450" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Courier New', Courier, monospace; cursor: default;">
   <style>
     :root {
-      --bg: #FDFDFD;
-      --stroke: #1A1A1A;
-      --text: #1A1A1A;
-      --path: #B0B0B0;
-      --signal: #1A1A1A;
+      --bg: #F8F9FA;
+      --trace: #ADB5BD;
+      --chip-fill: #E9ECEF;
+      --chip-stroke: #343A40;
+      --text: #212529;
+      --signal: #E63946;
+      --pin: #495057;
     }
 
     .bg-rect { fill: var(--bg); }
     
-    .node-box {
-      fill: var(--bg);
-      stroke: var(--stroke);
+    .trace {
+      fill: none;
+      stroke: var(--trace);
+      stroke-width: 2.5;
+      stroke-linejoin: miter;
+    }
+
+    .chip {
+      fill: var(--chip-fill);
+      stroke: var(--chip-stroke);
       stroke-width: 2;
-      filter: url(#sketchy);
+      rx: 2;
     }
     
-    .node-text {
+    .pin {
+      fill: var(--bg);
+      stroke: var(--pin);
+      stroke-width: 2;
+    }
+    
+    .chip-text {
       fill: var(--text);
       font-size: 14px;
-      font-weight: bold;
+      font-weight: 600;
       text-anchor: middle;
       dominant-baseline: middle;
       pointer-events: none;
     }
 
-    .edge {
-      fill: none;
-      stroke: var(--path);
-      stroke-width: 1.5;
-      stroke-dasharray: 4 4;
-      filter: url(#sketchy);
-    }
-
     .signal {
       fill: var(--signal);
-      filter: url(#sketchy);
+      filter: drop-shadow(0 0 3px var(--signal));
     }
   </style>
   
   <rect class="bg-rect" width="100%" height="100%" rx="10" />
 
-  <!-- Paths -->
-  <!-- Layer 1 to Layer 2 -->
-  <path id="p1" d="M 150 150 C 250 150, 300 100, 400 100" class="edge" />
-  <path id="p2" d="M 150 150 C 250 150, 300 225, 400 225" class="edge" />
-  <path id="p3" d="M 150 300 C 250 300, 300 225, 400 225" class="edge" />
-  <path id="p4" d="M 150 300 C 250 300, 300 350, 400 350" class="edge" />
+  <!-- Traces (Orthogonal PCB style) -->
+  <path id="p1" d="M 150 150 H 250 L 300 100 H 400" class="trace" />
+  <path id="p2" d="M 150 150 H 225 L 300 225 H 400" class="trace" />
+  <path id="p3" d="M 150 300 H 225 L 300 225 H 400" class="trace" />
+  <path id="p4" d="M 150 300 H 250 L 300 350 H 400" class="trace" />
 
-  <!-- Layer 2 to Layer 3 -->
-  <path id="p5" d="M 400 100 C 500 100, 550 150, 650 150" class="edge" />
-  <path id="p6" d="M 400 225 C 500 225, 550 150, 650 150" class="edge" />
-  <path id="p7" d="M 400 225 C 500 225, 550 300, 650 300" class="edge" />
-  <path id="p8" d="M 400 350 C 500 350, 550 300, 650 300" class="edge" />
+  <path id="p5" d="M 400 100 H 500 L 550 150 H 650" class="trace" />
+  <path id="p6" d="M 400 225 H 475 L 550 150 H 650" class="trace" />
+  <path id="p7" d="M 400 225 H 475 L 550 300 H 650" class="trace" />
+  <path id="p8" d="M 400 350 H 500 L 550 300 H 650" class="trace" />
 
-  <!-- Layer 3 to Layer 4 -->
-  <path id="p9" d="M 650 150 C 720 150, 750 225, 820 225" class="edge" />
-  <path id="p10" d="M 650 300 C 720 300, 750 225, 820 225" class="edge" />
+  <path id="p9" d="M 650 150 H 685 L 760 225 H 820" class="trace" />
+  <path id="p10" d="M 650 300 H 685 L 760 225 H 820" class="trace" />
 
-  <!-- Signals (Animated points along paths) -->
+  <!-- Signals (Animated Data Packets) -->
   <circle class="signal" r="4"><animateMotion dur="4s" repeatCount="indefinite" begin="0s"><mpath href="#p1"/></animateMotion></circle>
-  <circle class="signal" r="4"><animateMotion dur="5s" repeatCount="indefinite" begin="1s"><mpath href="#p2"/></animateMotion></circle>
-  <circle class="signal" r="4"><animateMotion dur="4.5s" repeatCount="indefinite" begin="0.5s"><mpath href="#p3"/></animateMotion></circle>
-  <circle class="signal" r="4"><animateMotion dur="5.5s" repeatCount="indefinite" begin="2s"><mpath href="#p4"/></animateMotion></circle>
-  <circle class="signal" r="4"><animateMotion dur="3.5s" repeatCount="indefinite" begin="0s"><mpath href="#p5"/></animateMotion></circle>
-  <circle class="signal" r="4"><animateMotion dur="4.2s" repeatCount="indefinite" begin="1.5s"><mpath href="#p6"/></animateMotion></circle>
-  <circle class="signal" r="4"><animateMotion dur="4.8s" repeatCount="indefinite" begin="0.8s"><mpath href="#p7"/></animateMotion></circle>
-  <circle class="signal" r="4"><animateMotion dur="3.9s" repeatCount="indefinite" begin="2.2s"><mpath href="#p8"/></animateMotion></circle>
+  <circle class="signal" r="4"><animateMotion dur="4.8s" repeatCount="indefinite" begin="1s"><mpath href="#p2"/></animateMotion></circle>
+  <circle class="signal" r="4"><animateMotion dur="4.2s" repeatCount="indefinite" begin="0.5s"><mpath href="#p3"/></animateMotion></circle>
+  <circle class="signal" r="4"><animateMotion dur="5.1s" repeatCount="indefinite" begin="2s"><mpath href="#p4"/></animateMotion></circle>
+  <circle class="signal" r="4"><animateMotion dur="3.7s" repeatCount="indefinite" begin="0s"><mpath href="#p5"/></animateMotion></circle>
+  <circle class="signal" r="4"><animateMotion dur="4.5s" repeatCount="indefinite" begin="1.5s"><mpath href="#p6"/></animateMotion></circle>
+  <circle class="signal" r="4"><animateMotion dur="4.1s" repeatCount="indefinite" begin="0.8s"><mpath href="#p7"/></animateMotion></circle>
+  <circle class="signal" r="4"><animateMotion dur="3.8s" repeatCount="indefinite" begin="2.2s"><mpath href="#p8"/></animateMotion></circle>
   <circle class="signal" r="4"><animateMotion dur="3.2s" repeatCount="indefinite" begin="0s"><mpath href="#p9"/></animateMotion></circle>
   <circle class="signal" r="4"><animateMotion dur="3.6s" repeatCount="indefinite" begin="1.2s"><mpath href="#p10"/></animateMotion></circle>
 
-  <!-- Nodes (Layer 1) -->
+  <!-- Chips (Layer 1) -->
   <g transform="translate(150, 150)">
-    <rect class="node-box" x="-70" y="-20" width="140" height="40" rx="3" />
-    <text class="node-text" x="0" y="0">[Foundation]</text>
+    <rect class="chip" x="-75" y="-20" width="150" height="40" />
+    <circle class="pin" cx="-75" cy="0" r="3" />
+    <circle class="pin" cx="75" cy="0" r="3" />
+    <text class="chip-text" x="0" y="2">[Foundation]</text>
   </g>
   <g transform="translate(150, 300)">
-    <rect class="node-box" x="-70" y="-20" width="140" height="40" rx="3" />
-    <text class="node-text" x="0" y="0">[Init Skill]</text>
+    <rect class="chip" x="-75" y="-20" width="150" height="40" />
+    <circle class="pin" cx="-75" cy="0" r="3" />
+    <circle class="pin" cx="75" cy="0" r="3" />
+    <text class="chip-text" x="0" y="2">[Init Skill]</text>
   </g>
 
-  <!-- Nodes (Layer 2) -->
+  <!-- Chips (Layer 2) -->
   <g transform="translate(400, 100)">
-    <rect class="node-box" x="-80" y="-20" width="160" height="40" rx="3" />
-    <text class="node-text" x="0" y="0">[Experience 1]</text>
+    <rect class="chip" x="-85" y="-20" width="170" height="40" />
+    <circle class="pin" cx="-85" cy="0" r="3" />
+    <circle class="pin" cx="85" cy="0" r="3" />
+    <text class="chip-text" x="0" y="2">[Experience 1]</text>
   </g>
   <g transform="translate(400, 225)">
-    <rect class="node-box" x="-80" y="-20" width="160" height="40" rx="3" />
-    <text class="node-text" x="0" y="0">[Core Skillset]</text>
+    <rect class="chip" x="-85" y="-20" width="170" height="40" />
+    <circle class="pin" cx="-85" cy="0" r="3" />
+    <circle class="pin" cx="85" cy="0" r="3" />
+    <text class="chip-text" x="0" y="2">[Core Skillset]</text>
   </g>
   <g transform="translate(400, 350)">
-    <rect class="node-box" x="-80" y="-20" width="160" height="40" rx="3" />
-    <text class="node-text" x="0" y="0">[Experience 2]</text>
+    <rect class="chip" x="-85" y="-20" width="170" height="40" />
+    <circle class="pin" cx="-85" cy="0" r="3" />
+    <circle class="pin" cx="85" cy="0" r="3" />
+    <text class="chip-text" x="0" y="2">[Experience 2]</text>
   </g>
 
-  <!-- Nodes (Layer 3) -->
+  <!-- Chips (Layer 3) -->
   <g transform="translate(650, 150)">
-    <rect class="node-box" x="-70" y="-20" width="140" height="40" rx="3" />
-    <text class="node-text" x="0" y="0">[Project Alpha]</text>
+    <rect class="chip" x="-75" y="-20" width="150" height="40" />
+    <circle class="pin" cx="-75" cy="0" r="3" />
+    <circle class="pin" cx="75" cy="0" r="3" />
+    <text class="chip-text" x="0" y="2">[Project Alpha]</text>
   </g>
   <g transform="translate(650, 300)">
-    <rect class="node-box" x="-70" y="-20" width="140" height="40" rx="3" />
-    <text class="node-text" x="0" y="0">[Project Beta]</text>
+    <rect class="chip" x="-75" y="-20" width="150" height="40" />
+    <circle class="pin" cx="-75" cy="0" r="3" />
+    <circle class="pin" cx="75" cy="0" r="3" />
+    <text class="chip-text" x="0" y="2">[Project Beta]</text>
   </g>
 
-  <!-- Node (Layer 4) -->
+  <!-- Chip (Layer 4) -->
   <g transform="translate(820, 225)">
-    <rect class="node-box" x="-60" y="-20" width="120" height="40" rx="3" />
-    <text class="node-text" x="0" y="0">[Target Goal]</text>
+    <rect class="chip" x="-65" y="-20" width="130" height="40" />
+    <circle class="pin" cx="-65" cy="0" r="3" />
+    <circle class="pin" cx="65" cy="0" r="3" />
+    <text class="chip-text" x="0" y="2">[Target Goal]</text>
   </g>
 </svg>
