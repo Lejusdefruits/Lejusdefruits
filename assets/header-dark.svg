@@ -12,13 +12,7 @@
     .tagline{ font-size:23px; font-weight:bold; fill:var(--ink-soft); }
     .sub{ font-size:16px; fill:var(--ink-soft); opacity:.9; }
 
-    #juice{ animation: fill 7s ease-in-out infinite; }
-    @keyframes fill{
-      0%{ transform:translateY(150px); }
-      35%{ transform:translateY(10px); }
-      62%{ transform:translateY(24px); }
-      100%{ transform:translateY(150px); }
-    }
+    #juice{ transform: translateY(18px); }
     .wave{ animation: drift 4s linear infinite; }
     .wave2{ animation: drift 5.5s linear infinite reverse; }
     @keyframes drift{ from{ transform:translateX(0); } to{ transform:translateX(-60px); } }
@@ -35,8 +29,7 @@
       100%{ transform:translateY(-115px); opacity:0; }
     }
     @media (prefers-reduced-motion: reduce){
-      #juice,.wave,.wave2,.b,.b2,.b3,.b4,.b5{ animation:none; }
-      #juice{ transform:translateY(18px); }
+      .wave,.wave2,.b,.b2,.b3,.b4,.b5{ animation:none; }
     }
   </style>
 
@@ -85,6 +78,12 @@
       <rect x="575" y="96" width="170" height="200" fill="url(#liquid)"/>
       <path class="wave" d="M555 98 q15 -10 30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 v40 h-240 Z" fill="var(--juice-top)" opacity="0.7"/>
       <path class="wave2" d="M555 100 q15 8 30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 v40 h-240 Z" fill="var(--juice-bot)" opacity="0.55"/>
+    </g>
+    <g fill="var(--glass-fill)" fill-opacity="0.3" stroke="var(--glass-fill)" stroke-width="2" stroke-opacity="0.6">
+      <rect x="615" y="145" width="35" height="35" rx="6" transform="rotate(15 632.5 162.5)" />
+      <rect x="665" y="180" width="40" height="40" rx="8" transform="rotate(-12 685 200)" />
+      <rect x="635" y="205" width="30" height="30" rx="5" transform="rotate(22 650 220)" />
+      <rect x="670" y="125" width="28" height="28" rx="4" transform="rotate(-8 684 139)" />
     </g>
     <g fill="var(--bubble)">
       <circle class="b"  cx="635" cy="238" r="5"/>

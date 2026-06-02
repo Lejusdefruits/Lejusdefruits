@@ -20,11 +20,11 @@
 
 ## 👨‍💻 À propos de moi
 
-Développeur passionné par la création d'applications robustes et scalables. Mon objectif est de transformer des problèmes complexes en solutions logicielles élégantes, efficaces et maintenables.
+Développeur passionné, je mixe les technologies pour créer des applications web robustes et rafraîchissantes. Mon objectif est d'extraire le meilleur de chaque outil pour servir des solutions logicielles concentrées en performance et garanties sans pépins.
 
-- 🚀 Actuellement concentré sur le développement d'applications performantes.
-- 💡 Intéressé par l'architecture logicielle, l'open-source et l'amélioration continue.
-- 🤝 Toujours ouvert pour collaborer sur des projets innovants et stimulants.
+- 🚀 Actuellement en train de presser du code pour des applications vitaminées.
+- 💡 Toujours en quête de nouvelles recettes d'architecture et de bonnes pratiques.
+- 🤝 Prêt à trinquer et collaborer sur des projets open-source fruités.
 - 📫 Pour me contacter : [EMAIL_ADDRESS]**
 
 ---
