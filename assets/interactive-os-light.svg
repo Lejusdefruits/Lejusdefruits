@@ -16,28 +16,75 @@
     .pane { fill: var(--bg); }
     .border { stroke: var(--border); stroke-width: 2; }
     
-    .tab-trigger { fill: transparent; cursor: pointer; }
+    .tree-text { fill: var(--fg); font-size: 13px; }
+    .tree-icon { fill: var(--comment); }
     
-    .tree-text {
-      fill: var(--fg);
-      font-size: 13px;
-      pointer-events: none;
-      transition: fill 0.2s;
-    }
-    
-    .tree-icon { fill: var(--comment); pointer-events: none; }
-    
-    .tab-trigger:hover .tree-text { fill: var(--keyword); font-weight: bold; }
-    .tab-trigger:hover .tree-icon { fill: var(--keyword); }
-    
-    .content { opacity: 0; transition: opacity 0.2s; }
-    #content-profile { opacity: 1; }
+    .content { opacity: 0; }
 
-    /* CSS Hover Hack */
-    #tab-projects:hover ~ #content-profile,
-    #tab-contact:hover ~ #content-profile { opacity: 0; }
-    #tab-projects:hover ~ #content-projects { opacity: 1; }
-    #tab-contact:hover ~ #content-contact { opacity: 1; }
+    /* Animations for automatic tab switching */
+    @keyframes showProfile {
+      0%, 31% { opacity: 1; } 33%, 100% { opacity: 0; }
+    }
+    @keyframes showProjects {
+      0%, 31% { opacity: 0; } 33%, 64% { opacity: 1; } 66%, 100% { opacity: 0; }
+    }
+    @keyframes showContact {
+      0%, 64% { opacity: 0; } 66%, 98% { opacity: 1; } 100% { opacity: 0; }
+    }
+
+    #content-profile { animation: showProfile 15s infinite; }
+    #content-projects { animation: showProjects 15s infinite; }
+    #content-contact { animation: showContact 15s infinite; }
+
+    @keyframes textProfile {
+      0%, 31% { fill: var(--keyword); font-weight: bold; } 33%, 100% { fill: var(--fg); font-weight: normal; }
+    }
+    @keyframes textProjects {
+      0%, 31% { fill: var(--fg); font-weight: normal; } 33%, 64% { fill: var(--keyword); font-weight: bold; } 66%, 100% { fill: var(--fg); font-weight: normal; }
+    }
+    @keyframes textContact {
+      0%, 64% { fill: var(--fg); font-weight: normal; } 66%, 98% { fill: var(--keyword); font-weight: bold; } 100% { fill: var(--fg); font-weight: normal; }
+    }
+
+    #text-profile { animation: textProfile 15s infinite; }
+    #text-projects { animation: textProjects 15s infinite; }
+    #text-contact { animation: textContact 15s infinite; }
+
+    @keyframes iconProfile {
+      0%, 31% { fill: var(--keyword); } 33%, 100% { fill: var(--comment); }
+    }
+    @keyframes iconProjects {
+      0%, 31% { fill: var(--comment); } 33%, 64% { fill: var(--keyword); } 66%, 100% { fill: var(--comment); }
+    }
+    @keyframes iconContact {
+      0%, 64% { fill: var(--comment); } 66%, 98% { fill: var(--keyword); } 100% { fill: var(--comment); }
+    }
+
+    #icon-profile { animation: iconProfile 15s infinite; }
+    #icon-projects { animation: iconProjects 15s infinite; }
+    #icon-contact { animation: iconContact 15s infinite; }
+
+    @keyframes hlProfile {
+      0%, 31% { opacity: 1; } 33%, 100% { opacity: 0; }
+    }
+    @keyframes hlProjects {
+      0%, 31% { opacity: 0; } 33%, 64% { opacity: 1; } 66%, 100% { opacity: 0; }
+    }
+    @keyframes hlContact {
+      0%, 64% { opacity: 0; } 66%, 98% { opacity: 1; } 100% { opacity: 0; }
+    }
+
+    #hl-profile { opacity: 0; animation: hlProfile 15s infinite; }
+    #hl-projects { opacity: 0; animation: hlProjects 15s infinite; }
+    #hl-contact { opacity: 0; animation: hlContact 15s infinite; }
+
+    /* Typing animation for status bar */
+    @keyframes typeStatus {
+      0%, 31% { content: " src/profile.yaml "; }
+      33%, 64% { content: " scripts/projects.sh "; }
+      66%, 98% { content: " config/contact.json "; }
+      100% { content: " src/profile.yaml "; }
+    }
 
     .code { fill: var(--fg); font-size: 14px; }
     .kw { fill: var(--keyword); font-weight: bold; }
@@ -45,20 +92,25 @@
     .com { fill: var(--comment); font-style: italic; }
     .num { fill: var(--number); font-size: 14px; text-anchor: end; user-select: none; }
     
-    /* Line Highlight Animation */
-    .line-hl { fill: var(--hl); opacity: 0.5; }
+    .line-hl { fill: var(--hl); opacity: 0.8; }
   </style>
 
   <!-- Background -->
   <rect class="pane" width="100%" height="100%" />
 
-  <!-- Borders (Tmux / Nvim splits) -->
+  <!-- Borders -->
   <line x1="220" y1="0" x2="220" y2="375" class="border" />
   
   <!-- Status Bar -->
   <rect x="0" y="375" width="850" height="25" fill="var(--status-bg)" />
   <text x="15" y="392" fill="var(--status-fg)" font-size="13" font-weight="bold"> NORMAL </text>
-  <text x="80" y="392" fill="var(--status-fg)" font-size="13"> src/main.rs </text>
+  
+  <g id="status-filename">
+    <text x="80" y="392" fill="var(--status-fg)" font-size="13" opacity="0"><animate attributeName="opacity" values="1;1;0;0;0;0" keyTimes="0;0.31;0.33;0.64;0.66;1" dur="15s" repeatCount="indefinite" /> src/profile.yaml </text>
+    <text x="80" y="392" fill="var(--status-fg)" font-size="13" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.31;0.33;0.64;0.66;1" dur="15s" repeatCount="indefinite" /> scripts/projects.sh </text>
+    <text x="80" y="392" fill="var(--status-fg)" font-size="13" opacity="0"><animate attributeName="opacity" values="0;0;0;0;1;1" keyTimes="0;0.31;0.33;0.64;0.66;1" dur="15s" repeatCount="indefinite" /> config/contact.json </text>
+  </g>
+
   <text x="750" y="392" fill="var(--status-fg)" font-size="13"> utf-8  [+]  100% </text>
 
   <!-- Nvim Tree (Sidebar) Header -->
@@ -66,34 +118,32 @@
   <text x="10" y="50" class="tree-icon" font-size="12">▼</text>
   <text x="25" y="50" fill="var(--fg)" font-size="13" font-weight="bold">Lejusdefruits</text>
 
-  <!-- TABS (Triggers) -->
-  <g id="tab-projects" class="tab-trigger">
-    <rect x="0" y="90" width="220" height="25" />
-    <text class="tree-icon" x="30" y="107" font-size="13">📄</text>
-    <text class="tree-text" x="50" y="107">projects.sh</text>
-  </g>
+  <!-- TABS -->
+  <g>
+    <!-- Background Highlights -->
+    <rect id="hl-profile" x="0" y="65" width="220" height="25" class="line-hl" />
+    <rect id="hl-projects" x="0" y="90" width="220" height="25" class="line-hl" />
+    <rect id="hl-contact" x="0" y="115" width="220" height="25" class="line-hl" />
 
-  <g id="tab-contact" class="tab-trigger">
-    <rect x="0" y="115" width="220" height="25" />
-    <text class="tree-icon" x="30" y="132" font-size="13">📄</text>
-    <text class="tree-text" x="50" y="132">contact.json</text>
-  </g>
+    <!-- Tab 1 -->
+    <text id="icon-profile" class="tree-icon" x="30" y="82" font-size="13">📄</text>
+    <text id="text-profile" class="tree-text" x="50" y="82">profile.yaml</text>
 
-  <g id="tab-profile" class="tab-trigger">
-    <rect x="0" y="65" width="220" height="25" />
-    <!-- Default highlighted tab background -->
-    <rect x="0" y="65" width="220" height="25" class="line-hl" />
-    <text class="tree-icon" x="30" y="82" font-size="13">📄</text>
-    <text class="tree-text" x="50" y="82" font-weight="bold">profile.yaml</text>
+    <!-- Tab 2 -->
+    <text id="icon-projects" class="tree-icon" x="30" y="107" font-size="13">📄</text>
+    <text id="text-projects" class="tree-text" x="50" y="107">projects.sh</text>
+
+    <!-- Tab 3 -->
+    <text id="icon-contact" class="tree-icon" x="30" y="132" font-size="13">📄</text>
+    <text id="text-contact" class="tree-text" x="50" y="132">contact.json</text>
   </g>
 
   <!-- CONTENT BLOCKS -->
 
   <!-- Content: Profile -->
   <g id="content-profile" class="content">
-    <rect x="220" y="60" width="630" height="20" class="line-hl" /> <!-- Active line highlight -->
+    <rect x="220" y="60" width="630" height="20" class="line-hl" /> 
     
-    <!-- Line numbers -->
     <text class="num" x="250" y="30">1</text>
     <text class="num" x="250" y="50">2</text>
     <text class="num" x="250" y="70">3</text>
@@ -103,14 +153,13 @@
     <text class="num" x="250" y="150">7</text>
     <text class="num" x="250" y="170">8</text>
 
-    <!-- Code -->
     <text class="code" x="270" y="30"><tspan class="com"># IDENTITY CONFIGURATION</tspan></text>
     <text class="code" x="270" y="50">---</text>
     <text class="code" x="270" y="70"><tspan class="kw">role:</tspan> <tspan class="str">"Software Engineer"</tspan></text>
     <text class="code" x="270" y="90"><tspan class="kw">specialty:</tspan> <tspan class="str">"Backend Systems, Low-level Architecture"</tspan></text>
     <text class="code" x="270" y="110"><tspan class="kw">focus:</tspan> <tspan class="str">"Building scalable &amp; resilient infrastructure"</tspan></text>
     <text class="code" x="270" y="130"><tspan class="kw">location:</tspan> <tspan class="str">"Paris, France"</tspan></text>
-    <text class="code" x="270" y="170"><tspan class="com">&gt; Hover over files in the explorer to navigate</tspan></text>
+    <text class="code" x="270" y="170"><tspan class="com">&gt; Auto-pilot mode: Navigating through profile...</tspan></text>
   </g>
 
   <!-- Content: Projects -->
