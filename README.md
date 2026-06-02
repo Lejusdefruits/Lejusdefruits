@@ -66,10 +66,17 @@
 
 <div align="center">
   <br>
+  <!-- Core Languages & Infrastructure -->
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,ts,js,go,react,nextjs,nodejs,docker,kubernetes,aws,gcp,git,linux,bash&perline=14" alt="Technologies" />
+    <img src="https://skillicons.dev/icons?i=c,java,scala,py,js,html,css,bash,arduino,git,docker,linux,postgres,sqlite&perline=14" alt="Core Technologies" />
   </a>
-  <br>
+  <br><br>
+  <!-- AI & Agentic Tools -->
+  <img src="https://img.shields.io/badge/LangGraph-000000?style=for-the-badge&logo=openai&logoColor=white" alt="LangGraph" />
+  <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white" alt="Ollama" />
+  <img src="https://img.shields.io/badge/ChromaDB-000000?style=for-the-badge&logo=chroma&logoColor=white" alt="ChromaDB" />
+  <img src="https://img.shields.io/badge/PyTorch-000000?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
+  <br><br>
   <img src="https://img.shields.io/badge/42_Network-000000?style=for-the-badge&logo=42&logoColor=white" alt="42 Network" />
   <br><br>
 </div>
