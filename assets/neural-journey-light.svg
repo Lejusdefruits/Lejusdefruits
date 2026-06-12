@@ -80,13 +80,13 @@
     <rect class="chip" x="-75" y="-20" width="150" height="40" />
     <circle class="pin" cx="-75" cy="0" r="3" />
     <circle class="pin" cx="75" cy="0" r="3" />
-    <text class="chip-text" x="0" y="2">[libft_core]</text>
+    <text class="chip-text" x="0" y="2">[push_swap_algo]</text>
   </g>
   <g transform="translate(150, 300)">
     <rect class="chip" x="-75" y="-20" width="150" height="40" />
     <circle class="pin" cx="-75" cy="0" r="3" />
     <circle class="pin" cx="75" cy="0" r="3" />
-    <text class="chip-text" x="0" y="2">[piscine_root]</text>
+    <text class="chip-text" x="0" y="2">[pipex_sys]</text>
   </g>
 
   <!-- Chips (Layer 2) -->
@@ -94,19 +94,19 @@
     <rect class="chip" x="-85" y="-20" width="170" height="40" />
     <circle class="pin" cx="-85" cy="0" r="3" />
     <circle class="pin" cx="85" cy="0" r="3" />
-    <text class="chip-text" x="0" y="2">[push_swap_algo]</text>
+    <text class="chip-text" x="0" y="2">[Codexion_C]</text>
   </g>
   <g transform="translate(400, 225)">
     <rect class="chip" x="-85" y="-20" width="170" height="40" />
     <circle class="pin" cx="-85" cy="0" r="3" />
     <circle class="pin" cx="85" cy="0" r="3" />
-    <text class="chip-text" x="0" y="2">[pipex_sys]</text>
+    <text class="chip-text" x="0" y="2">[fly-in_route]</text>
   </g>
   <g transform="translate(400, 350)">
     <rect class="chip" x="-85" y="-20" width="170" height="40" />
     <circle class="pin" cx="-85" cy="0" r="3" />
     <circle class="pin" cx="85" cy="0" r="3" />
-    <text class="chip-text" x="0" y="2">[so_long_gfx]</text>
+    <text class="chip-text" x="0" y="2">[42-PacMan]</text>
   </g>
 
   <!-- Chips (Layer 3) -->
@@ -114,7 +114,7 @@
     <rect class="chip" x="-75" y="-20" width="150" height="40" />
     <circle class="pin" cx="-75" cy="0" r="3" />
     <circle class="pin" cx="75" cy="0" r="3" />
-    <text class="chip-text" x="0" y="2">[jarvis_agent]</text>
+    <text class="chip-text" x="0" y="2">[call_me_maybe]</text>
   </g>
   <g transform="translate(650, 300)">
     <rect class="chip" x="-75" y="-20" width="150" height="40" />
@@ -128,6 +128,6 @@
     <rect class="chip" x="-65" y="-20" width="130" height="40" />
     <circle class="pin" cx="-65" cy="0" r="3" />
     <circle class="pin" cx="65" cy="0" r="3" />
-    <text class="chip-text" x="0" y="2">[Agentic_AI]</text>
+    <text class="chip-text" x="0" y="2">[NotLongGraph]</text>
   </g>
 </svg>
